@@ -1,26 +1,3 @@
-Dla drzwi z systemem KD proponowalibyśmy dać kontaktron - informacja o stanie drzwi będzie możliwa do wyświetlenia w systemie. Możliwe jest także sygnalizowanie w przypadku zbyt długiego otwarcia drzwi - gdy np. ktoś zablokuje po otwarciu.
-Niezbędny jest także element blokujący (elektrozaczep). Kontatktronów w oknach nie dajemy.
-
-Drzwi z projektowanym system KD (w budynku B):
-B003
-B005
-B007
-B222
-B223
-B224
-B225
-B226
-B228
-B231 (w komentarzu byłó B229)
-B230
-B232 - dod. drzwi po zmianach arch.
-
-Zgodnie z rozmową drzwi na klatkę nie będą objęte systemem KD.
-Powinny zostać dostarczone w mechanizmy (siłownik, system zwalniania) umożliwiające automatyczne otwarcie przez centralkę oddymiania w przypadku zadymienia klatki.
-
-=================
-
-
 
 
 ============== USB OTG phone cable:
