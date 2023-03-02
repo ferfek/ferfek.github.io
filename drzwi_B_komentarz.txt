@@ -1,0 +1,276 @@
+Dla drzwi z systemem KD proponowalibyśmy dać kontaktron - informacja o stanie drzwi będzie możliwa do wyświetlenia w systemie. Możliwe jest także sygnalizowanie w przypadku zbyt długiego otwarcia drzwi - gdy np. ktoś zablokuje po otwarciu.
+Niezbędny jest także element blokujący (elektrozaczep). Kontatktronów w oknach nie dajemy.
+
+Drzwi z projektowanym system KD (w budynku B):
+B003
+B005
+B007
+B222
+B223
+B224
+B225
+B226
+B228
+B231 (w komentarzu byłó B229)
+B230
+B232 - dod. drzwi po zmianach arch.
+
+Zgodnie z rozmową drzwi na klatkę nie będą objęte systemem KD.
+Powinny zostać dostarczone w mechanizmy (siłownik, system zwalniania) umożliwiające automatyczne otwarcie przez centralkę oddymiania w przypadku zadymienia klatki.
+
+=================
+
+
+
+
+============== USB OTG phone cable:
+
+Some phones / tablets allow battery charging during USB OTG mode. I've seen documentation for two different schemes.
+
+1) Normal OTG mode (no battery charging): ID pin is connected to the ground pin.
+
+2) OTG mode with battery charging v1: ID pin connected to ground via 20k resistor.
+
+3) OTG mode with battery charging v2: ID pin connected to ground via 120k resistor.
+
+These mode work with a small subset of all the OTG-capable devices. But it's pretty easy to try with your particular device to see if it might work with it.
+
+==============================================
+
+
+1. Burr-Brown PCM1792A- thick mid, good bass and slightly rolled off highs. Somewhat full bodied sound.
+2. Cirrus Logic CS4398- lively sound; bass is less, mid is less thick and a bit neutral while highs is extended. No so full bodied sound.
+3. Wolfson WM8740 - more bass, thick mid, a bit warmer sounding, highs a bit rolled off. Somewhat full bodied sound.
+4. Sabre ESS9018- clean sounding, a bit to the clinical side, light bass, almost neutral mid and high is very extended, some 'sweetness' - not so full bodied sound
+5. Verita AKM4490- good bass, thick mid and extended high, some sweetness. Overall full bodied sound - I would say, this one sound more musical then the rest.
+
+
+
+
+==========================  AD1955 -> 
+
+
+
+That design of raindrop_hui's appears to use LF351 opamps in the I/V stage. 
+
+JRC juz poszedl na 797brz. opa275 planuje wymienic na MAA741C. Takie małe odkrycie zaczytane z jakiegos forum.
+
+Po wymianie opa 5532 na 2111kp sanskrit "sie polepszyl" 
+
+Dzisiaj odkryłem złoty zestaw opampów dla Sanskrita. Na wyjściu DAC 2 x OPA2111kp, na buforze Muses8820. Co mogę napisać. Dźwięk jest idealnie zrównoważony, duuuużo powietrza i znakomita separacja, nic się nie zlewa.
+
+
+MAA741C - ?? ok?
+
+Na razie najfajniej gra OP275 plus OPA134 (w aplikacji jak nawyżej )
+
+OpAmps (2 opa2107, 1 opa2604)
+
+ replacing the JRC5532 output buffer with a selection before finally choosing the LM4562. It sounded better - better sound stage, top-end and tighter bass. I kept the other two I/V converter op-amps (OP275)
+
+
+Chciałbym jeszcze sprawdzić AD8022, bo podobno dobrze się spisuję w konwersji I/V,
+
+
+
+
+=============================
+TDA1543:
+I have tried dozens of opamps as IV in my NON-OS TDA1543 KWAK-DAC like in random order: LM6171, OP249, AD844, AD811, OPA604, AD711, AD744, AD8620, OPA603, LT1026, AD815Y, AD 826, AD817, AD827, AD847, AD823, OPA 627, OP27, OPA134, OP275.
+To my ears the OP275 was the best
+
+
+47lab
+
+2200/16 KMG przed stab. 8 i 5 v
+VR - Zasil. TDA
+Brązowe - wyjście(tor)
+2x 3k (1%)  + 1,6k (5%) - bordowy
+
+PCM1704
+For me OPA627 is superior in comparison with OPA2604, and even OPA2134 is superior to it. OP275 is OK, but I liked OPA627 and AD843 better.
+
+I told you to use the LM6171 for I/V instead of the OPA627
+
+
+Within my PMD100 and Balance AD1865 DAC, the LM6181 (bypassed with Cerafina caps), was in all aspects better than the opa627BP's. I used the AD8066 as output buffer, adn ALW-regulators (that is Jung-type reg). The aspects are:
+- dynamics,
+- details of a tone (drum base kicks are supported by the mids and hights, the same counts for the tones of a bass string)
+-phase -correctness
+This does not mean other opamps aren't good, but within my configuration the LM6181 performs the best.
+
+
+To me for now , the best OP in IV with PCM63 is AD847.
+
+For fast settling time / high resolution / high sampling rates DAC's there's only one I to V OP: AD8066.
+
+I suggest 2134 on one (good for ‘masking’) side, 275 as good all rounder, 627 as fast but a bit suffocating, 826 as very good!, and finally - 8066. Haven't tried LM61** - can not get it down under - it's like living in isolation down here. I think it's close to 826.
+
+I've been experimenting with lots of opamps over the last few years. My favorite combo is the AD8610 with AD8510 for my CD67-OSE at the moment. For a TDA1541 DAC, the AD797 is a nice one indeed, but I also like OPA211 and AD8597.
+
+I/V ->
+In non standard design and proper PCB tracing and PSU - NE5534P(TI), LME49710, LT1468
+In standart the best would be AD846
+
+
+PCM1704 to twice first-order inverting amp with series R and R||C feedback. Very simple IVC. During testing, OPA2134 and OPA1612 came out good. OPA1642 was clearly beat by OPA1612 being more "rocky" and forward. The OPA2134, in comparison to OPA1612, is more detailed but perhpas shrowded
+
+OPA1641 for me is superb and beats out 1611 without any trouble. OPA827 wins over both of them though
+
+To me, newer OpAmps like the AD8099 or LM4562 are plenty sufficient for the today DAC's I/V stages
+
+
+LME49713, could be a killer opamp
+
+If You want no transistor sound, LM61xx series and at least 2200 uF right at opamp pins. And NO output cap.
+
+XMOS->PCM1794->LME49720->BUF634(x2)->KRK KNS08400
+
+I also use 811 (after dual differential 1704's) followed by differential to single-end LM6172 stage
+
+If you want to save the time and money, go straight to the best the OP's can provide: AD811 as I/V and LM6172 as lpf/buffer.
+With low current-out DAC's like 1704, there is simply no other way to do I/V but to use AD811
+
+
+===================================
+PCM1794:
+
+  2 X OPA1612 + OPA2132PA w buforze
+
+w I/v dobry scalak taki jak używaleś LT1364 gra bajkowo
+
+Bogdan-> do pop i rocka opampy ( LT1364/AD744 ) , a do klasyki, jazzu , wokalistyki dyskretny
+--- NE5534 signeticsa był super, ale po dłuższym czasie wydalawo mi sie jakoś zbyt dosadnie na średnicy, OPA627 też super, ale basiska za duzo, AD825 jakiś rozmiękczony, LT1028 podobny do NE5534 ale ostrawy i dlatego dyskretny analog czy trafo wygrywało bez pudła, ale z AD744 jest inaczej - nic mnie nie drażni , niczego nie jest za dużo , jest soczyście, przestrzennie i dla mnie po prostu przyjemnie, do tego doszło troszkę dynamiki
+
+
+Póki co u mnie najlepiej sprawdza się kombinacja 2xOPA1612 (I/V + filtr) + 1xLME49860 (desymetryzacja), jedyną wadą tego układu jest stosunkowo słaba głębokość sceny.
+
+
+(Asus xonar) 2x oryginalnych MUSES8820 + 1x LM4562NA.
+Też ok: JRC2114D + 2x NE5532D
+
+W filtrze analogowym proponuje się zastosowanie w filtrze dolnoprzepustowym: OPA1656, następnie z pogorszeniem OPA1642/OPA2141/OPA2140, OPA1652, AD823. Drugi wzmacniacz operacyjny: LME49720, LT1469, OPA1656, OPA2156, OPA1642.
+
+
+
+TDA1387 I/V --> LM6172
+
+
+Kiler I/V -> LT1469
+MSB link -> I have to say 1364 sounds much better...LT1469 sounds almost muted in comparism. 
+
+
+------------------
+
+I have the 1793 version of the $50 DAC with the OP275 op amp. To me it is completely superior to the unmodified CS4398 DAC. Don't underestimate the OP275. It utterly destroys the LM4562 for musicality. I like the $50 DAC better than the CS4398 and UTC-A20. It's not as transparent, but I prefer it since it is so musical.
+
+
+
+===== ===== ====== =======
+CAP"
+
+My general strategy is,
+Main filters: Nichicon KW (small amps), United chemiCon SMH or KMS series (large amps)
+Power supply Nichicon PW
+Bipolar power supplu Nichicon EP
+Bipolar audio path Nichicon ES
+Low noise/leakage (phono/preamp signal path) Nichicon UKL (I need to try MKS), polyproplyene is better if you can fit them in
+Audio path Elna silmic II, also use for local power rails.
+
+You could use appropriate panasonics,,, and get a good result
+
+
+I've tried loads of coupling caps in the DAC I use with my headphone amp and also In my Onix OA21 Integrated amp. Silmics sound overly soft and smooth, Nearly all the polypropylene caps I tried sounded too bright, Mundorf supreme silver,gold,oil had a dark midrange with unnatural highs, Nichicon KZ sound similar to polyropylene with a bright upper midrange. Polycarbonate and polyester both sound too bright as well.
+The best by far was the Nichicon FW - everything sounds perfectly balanced.
+
+
+
+==================
+
+You should give a try with the OPA2210 that is a modern bipolar super beta OP amp, I tried it with my Purifi, Dual Tripath and TPA325X amps.
+It is an amazing OP amp, fast accurate with a incredible soundstage. I did not find any faults in it. Clean, well-defined basses, a sublime midrange and very soft and well-transcribed highs.
+
+
+Sounds better than any OP amp I tried (1622 / 1656 / 1612 / Muse / JRC4580 / OPA627 / Burson V5i / etc)
+
+
+
+================= Juma Cx
+
+The Kemet ALC10 caps are very well known for their remarkable midrange qualities and smooth 'top end' 
+
+
+It's great to see the Epcos caps in the build but even these still suffer from 'overdone' - try using much, much smaller caps on the output like 100, 220 or 470uF and try the Nichicon Bipolar in place of the Panasonics - those bigger Epcos caps are excellent as primary filter caps - the whole behaviour/sound of the supply will be quite different
+
+
+For the power fets, you can't get much better than the ILZ24N/IRL9Z34N pair that aren't expensive - the AMB Laboratories regulator uses 2 each of these per rail (in //, sharing current with a 0.47R resistor) - this can be seen on the Sigma 22 regulator on their website - works like a charm in the simpler CMx too - voltage drop is about 2 volts across the device
+
+
+===================
+Nippon chemicon ARI - w torze sygn. ok
+
+Coupling:  FR primarily and, FC... KL came the closest to somewhat close
+
+
+==============
+
+Forget AD797, OPA627, 275, 1028 and all the other OLD opamps. I used them for a long long time but they are old and we have new opamps with MUCH higher SQ.
+
+There is NO WAY that one of these opamps sound better then the mentioned OPA1612 and other new ones like OPA2192 etc. and if they do it is the fault of the circuit or whatever. As Mark pointed out OPA1612 is a terrific sounding opamp and if you have problems with its bold mighty extreme low bass performance or with the extreme high resolution and unfiltered highs you can use other new opamps with a more gentle sound like OPA2209, OPA2189 etc.
+
+
+============== PCM1792 DAC i/v
+
+Used OPA1656 in I/V of PCM1792 in dual mono configuration. Tried in this place OP275, OPA1612, OPA1642, OPA1656 and OPA828. Best SQ have with 1656. May be 828 will be better, but i have to do some thing in the board to extract best of it. In final have to say, that OPA1656 is best of the best in I/V for me to now
+
+============ opamp preamp
+
+
+OPA1612 sounds better than any transistor preamp I've ever heard and better then my own 6N6P 2 case -no barrels hold- 36kg monster preamp with a 100% double blind test win rate. Yes it destroyed many many extreme expensive commercial preamps in the last 25 years. The OPA1656 is maybe even
+
+but sound wise opa1656 is better sounding, and opa827
+
+OPA1602 - niedoceniony
+
+If you want a value dual, OPA2227 is the way to go. Similar sound to OPA2134 but better control in the bass.
+
+NJM2043D for phone stage.
+LM4562 if you are wanting accuracy, nice tones
+OPA2134 if you want more body/timbre, nice tones.
+
+- OPA2134 has good tone and detail when in single mono mode ie with two op amps one per channel. When used as a single dual stereo op amp I find the soundstage a bit flat and a thick sound. 
+- LM4562 is another level altogether. Agree with previous post, fast, detailed, revealing and neutral. Just have to watch that it doesn’t oscillate in circuits not designed for such a high speed unit. 
+
+those OPA827 OPA 1612. OPA 1642  are the best for audio, nothing comes close
+
+
+======================= pcm1794
+
+For use with this DAC, my preference order is like: AD843AQ > OPA627 > OPA828 > OPA1656 > OPA1612.
+Performances of OPA627 and OPA828 are very close. OPA627 seems to have a tiny bit more clarity.
+AD843AQ has best clarity and authority. The high, mid, and low frequencies are nice and balanced. I have no surprise on the result as AD843 is also my favorite op-amp when used in the other DAC unit (L1387).
+
+
+=====================  LM1875
+I'm sharing my experience with a non-inverting LM1875 gainclone I built and I am quite happy with its sound signature.
+1. Firstly I built it with standard LM317/337 regulated power supply with a 22uF bypassed adj. resistor and output 220uF Elna silmic on the pins. It sounded harsh and unbearable, even after some burn-in.
+2. I removed the regulators and put it on unregulated voltage. My filtering capacitors were 4400uF Siemens LL capacitors. I was able to increase the output voltage as the regulated one, because I had many taps on the power transformer's secondary. I got acceptable, listenable, nice sound without loosing details or dynamics.
+3. Nirvana came to me from the innocent looking LM1875 after transforming the power supply filtering into choke input. I inserted 200mH chokes before the capacitors and made sure critical idle current was drawn using a dissipating resistor. I increased my output voltage further from the secondaries taps, because choke inputs lowers it with an approx. factor of 0.9 as opposed to 1,41 from a cap input filter.
+I never went to capacitor input again. The sound was cleaner, smoother and more detailed.
+
+=========================pots
+I have used TKD, TOCOS (Carbon),
+
+
+==============================opamp HP clas A
+http://www.rock-grotto.co.uk/opamp.htm
+
+
+==============================  caps -> power supply
+
+At last I say the best tonally correct cap is Mundorf Mlytic AG and for clear and crispier sound use nichicon. Smoother sound use Elna. Super crisp use cerafine. Flat sound use panasonic FC , Nichicon Muse. Sprage overall standard balance but not very resolving
+
+
+================  CS4397 
+
+AD8599  - good 
